@@ -5,23 +5,42 @@ internal class Program
     private static void Main()
     {
         Console.WriteLine("This is Arrays and Lists demostration");
+        int[] numberValues = { -11, 12, -42, 0, 1, 90, 68, 6, -9 };
+        string[] namesValues = { "Salva", "Pepe", "Juan", "Luisa", "María", "Pepa" };
+
 
         Console.WriteLine("Selection Sort with numbers:");
-        int[] numberValues = { -11, 12, -42, 0, 1, 90, 68, 6, -9 };
-        SelectionSort.Sort(numberValues);
-        Console.WriteLine(string.Join(", ", numberValues));
+        int[] selectionSortNumberValues = (int[])numberValues.Clone();
+        SelectionSort.Sort(selectionSortNumberValues);
+        Console.WriteLine(string.Join(", ", selectionSortNumberValues));
 
         Console.WriteLine("Selection Sort with names:");
-        string[] namesValues = { "Salva", "Pepe", "Juan", "Luisa", "María", "Pepa" };
-        SelectionSort.Sort(namesValues);
-        Console.WriteLine(string.Join(", ", namesValues));
+        string[] selectionSortNamesValues = (string[])namesValues.Clone();
+        SelectionSort.Sort(selectionSortNamesValues);
+        Console.WriteLine(string.Join(", ", selectionSortNamesValues));
+
+        Console.WriteLine();
 
         Console.WriteLine("Insertion Sort with numbers:");
-        InsertionSort.Sort(numberValues);
-        Console.WriteLine(string.Join(", ", numberValues));
+        int[] insertionSortNumberValues = (int[])numberValues.Clone();
+        InsertionSort.Sort(insertionSortNumberValues);
+        Console.WriteLine(string.Join(", ", insertionSortNumberValues));
 
         Console.WriteLine("Insertion Sort with names:");
-        InsertionSort.Sort(namesValues);
-        Console.WriteLine(string.Join(", ", namesValues));
+        string[] insertionSortNamesValues = (string[])namesValues.Clone();
+        InsertionSort.Sort(insertionSortNamesValues);
+        Console.WriteLine(string.Join(", ", insertionSortNamesValues));
+
+        Console.WriteLine();
+
+        Console.WriteLine("Bubble Sort with numbers:");
+        int[] bubbleSortNumberValues = (int[])numberValues.Clone();
+        BubbleSort.Sort(bubbleSortNumberValues);
+        Console.WriteLine(string.Join(", ", bubbleSortNumberValues));
+
+        Console.WriteLine("Bubble Sort with names:");
+        string[] bubbleSortNamesValues = (string[])namesValues.Clone();
+        BubbleSort.Sort(bubbleSortNamesValues);
+        Console.WriteLine(string.Join(", ", bubbleSortNamesValues));
     }
 }
