@@ -2,7 +2,7 @@
 
 internal class Program
 {
-    private static void Main(string[] args)
+    private static void Main()
     {
         Console.WriteLine("This is Arrays and Lists demostration");
 
@@ -14,6 +14,14 @@ internal class Program
         Console.WriteLine("Selection Sort with names:");
         string[] namesValues = { "Salva", "Pepe", "Juan", "Luisa", "María", "Pepa" };
         SelectionSort.Sort(namesValues);
+        Console.WriteLine(string.Join(", ", namesValues));
+
+        Console.WriteLine("Insertion Sort with numbers:");
+        InsertionSort.Sort(numberValues);
+        Console.WriteLine(string.Join(", ", numberValues));
+
+        Console.WriteLine("Insertion Sort with names:");
+        InsertionSort.Sort(namesValues);
         Console.WriteLine(string.Join(", ", namesValues));
     }
 }

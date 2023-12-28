@@ -17,13 +17,8 @@
                         minValue = array[j];
                     }
                 }
-                Swap(array, i, minIndex);
+                Utils.Swap(array, i, minIndex);
             }
-        }
-
-        public static void Swap<T>(T[] array, int first, int second)
-        {
-            (array[second], array[first]) = (array[first], array[second]);
         }
     }
 }
