@@ -42,5 +42,12 @@ internal class Program
         string[] bubbleSortNamesValues = (string[])namesValues.Clone();
         BubbleSort.Sort(bubbleSortNamesValues);
         Console.WriteLine(string.Join(", ", bubbleSortNamesValues));
+
+        Console.WriteLine();
+
+        Console.WriteLine("Quick Sort with numbers:");
+        int[] quickSortNumberValues = (int[])numberValues.Clone();
+        QuickSort.Sort(quickSortNumberValues);
+        Console.WriteLine(string.Join(", ", quickSortNumberValues));
     }
 }
