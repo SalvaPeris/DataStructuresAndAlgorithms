@@ -1,4 +1,4 @@
-﻿using Arrays_and_Lists;
+﻿using Arrays_and_Lists.SortingAlgorithms;
 
 internal class Program
 {

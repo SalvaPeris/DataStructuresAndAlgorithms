@@ -1,4 +1,4 @@
-﻿namespace Arrays_and_Lists
+﻿namespace Arrays_and_Lists.SortingAlgorithms
 {
     public static class QuickSort
     {
@@ -19,7 +19,7 @@
             return array;
         }
 
-        private static int Partition<T>(T[] array, int lower, int upper) where T: IComparable
+        private static int Partition<T>(T[] array, int lower, int upper) where T : IComparable
         {
             int i = lower;
             int j = upper;

@@ -1,10 +1,10 @@
-﻿namespace Arrays_and_Lists
+﻿namespace Arrays_and_Lists.SortingAlgorithms
 {
     public static class SelectionSort
     {
         public static void Sort<T>(T[] array) where T : IComparable
         {
-            for (int i = 0; i < array.Length - 1 ; i++)
+            for (int i = 0; i < array.Length - 1; i++)
             {
                 int minIndex = i;
                 T minValue = array[i];

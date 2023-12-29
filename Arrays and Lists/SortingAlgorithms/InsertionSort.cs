@@ -1,4 +1,4 @@
-﻿namespace Arrays_and_Lists
+﻿namespace Arrays_and_Lists.SortingAlgorithms
 {
     public static class InsertionSort
     {
