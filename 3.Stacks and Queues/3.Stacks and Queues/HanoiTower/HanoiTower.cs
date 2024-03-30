@@ -6,8 +6,16 @@
         public int MovesCount { get; private set; }
         public Stack<int>? From { get; private set; }
         public Stack<int>? To { get; private set; }
-        public Stack<int?>? Auxiliary { get; private set; }
+        public Stack<int>? Auxiliary { get; private set; }
 
         public event EventHandler<EventArgs>? MoveCompleted;
+
+        public HanoiTower(int discs)
+        {
+            DiscsCount = discs;
+            From = new Stack<int>();
+            To = new Stack<int>();
+            Auxiliary = new Stack<int>();
+        }
     }
 }
