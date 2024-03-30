@@ -16,6 +16,12 @@
             From = new Stack<int>();
             To = new Stack<int>();
             Auxiliary = new Stack<int>();
+
+            for(int i = 1; i <= discs; i++) 
+            {
+                int size = discs - 1 + 1;
+                From.Push(size);
+            }
         }
     }
 }
