@@ -18,9 +18,9 @@ internal class Program
     {
         if (discs > 0)
         {
-            Move(discs - 1, from, auxiliary, to);
+            MoveTest(discs - 1, from, auxiliary, to);
                 Console.WriteLine(from + " -> " + to);
-            Move(discs - 1, auxiliary, to, from);
+            MoveTest(discs - 1, auxiliary, to, from);
         }
     }
 }
