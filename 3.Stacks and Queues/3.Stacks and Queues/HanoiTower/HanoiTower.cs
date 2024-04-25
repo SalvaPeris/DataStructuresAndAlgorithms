@@ -20,8 +20,6 @@
             To = new Stack<int>();
             Auxiliary = new Stack<int>();
 
-
-
             for (int i = 1; i <= discs; i++) 
             {
                 int size = discs - i + 1;
