@@ -1,6 +1,9 @@
-﻿using _3.Stacks_and_Queues.HanoiTower;
+﻿using _3.Stacks_and_Queues.CallCenter;
+using _3.Stacks_and_Queues.HanoiTower;
+using System.Reflection.Metadata.Ecma335;
 
-internal class Program
+// PROGRAM FOR HANOI TOWER
+/*internal class Program
 {
     private const int DISCS_COUNT = 3;
 
@@ -22,5 +25,34 @@ internal class Program
                 Console.WriteLine(from + " -> " + to);
             MoveTest(discs - 1, auxiliary, to, from);
         }
+    }
+}*/
+
+//PROGRAM FOR CALL CENTER ONE CONSULTANT
+internal class Program
+{
+    private static void Main(string[] args)
+    {
+        Random random = new Random();
+
+        CallCenter center = new CallCenter();
+        center.Call(1234);
+        center.Call(5678);
+        center.Call(1468);
+        center.Call(9641);
+
+        while (center.AreWaitingCalls())
+        {
+            IncomingCall call = center.Answer("Marcin");
+            Log($"Call #{call.Id} from {call.ClientId} is answered by {call.Consultant}");
+            Thread.Sleep(random.Next(1000, 10000));
+            center.End(call);
+            Log($"Call #{call.Id} from {call.ClientId} is ended by {call.Consultant}");
+        }
+    }
+
+    private static void Log(string text)
+    {
+        Console.WriteLine($"[{DateTime.UtcNow.ToString("HH:mm:ss")}]   {text}");
     }
 }
