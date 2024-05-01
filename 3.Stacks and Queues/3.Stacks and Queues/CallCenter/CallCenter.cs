@@ -1,13 +1,17 @@
-﻿namespace _3.Stacks_and_Queues.CallCenter
+﻿using System.Collections.Concurrent;
+
+namespace _3.Stacks_and_Queues.CallCenter
 {
     public class CallCenter
     {
         private int _counter = 0;
-        public Queue<IncomingCall> Calls { get; private set; }
+        public ConcurrentQueue<IncomingCall> Calls { get; private set; }
+        //public Queue<IncomingCall> Calls { get; private set; }
 
         public CallCenter()
         {
-            Calls = new Queue<IncomingCall>();
+            Calls = new ConcurrentQueue<IncomingCall>();
+            //Calls = new Queue<IncomingCall>();
         }
 
         public void Call(int clientId)

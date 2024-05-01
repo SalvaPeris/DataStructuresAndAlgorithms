@@ -29,7 +29,7 @@ using System.Reflection.Metadata.Ecma335;
 }*/
 
 //PROGRAM FOR CALL CENTER ONE CONSULTANT
-internal class Program
+/*internal class Program
 {
     private static void Main(string[] args)
     {
@@ -55,4 +55,6 @@ internal class Program
     {
         Console.WriteLine($"[{DateTime.UtcNow.ToString("HH:mm:ss")}]   {text}");
     }
-}
+}*/
+
+// PROGRAM FOR CALL CENTER MANY CONSULTANTS
