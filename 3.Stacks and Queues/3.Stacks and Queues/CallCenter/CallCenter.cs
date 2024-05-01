@@ -14,7 +14,7 @@ namespace _3.Stacks_and_Queues.CallCenter
             //Calls = new Queue<IncomingCall>();
         }
 
-        public void Call(int clientId)
+        public int Call(int clientId)
         {
             IncomingCall call = new IncomingCall()
             {
@@ -24,13 +24,14 @@ namespace _3.Stacks_and_Queues.CallCenter
             };
 
             Calls.Enqueue(call);
+            return Calls.Count;
         }
 
         public IncomingCall? Answer(string consultant)
         {
-            if (Calls.Count > 0)
+            if (Calls.Count > 0 && Calls.TryDequeue(out IncomingCall call))
             {
-                IncomingCall call = Calls.Dequeue();
+                //IncomingCall call = Calls.Dequeue();
                 call.Consultant = consultant;
                 call.StartTime = DateTime.UtcNow;
                 return call;
