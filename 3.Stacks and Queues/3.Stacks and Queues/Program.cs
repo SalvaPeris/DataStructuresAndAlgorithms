@@ -66,8 +66,8 @@ internal class Program
         CallCenter center = new CallCenter();
         Parallel.Invoke(
             () => CallersAction(center),
-            //() => ConsultantAction(center, "Marcin", ConsoleColor.Red),
-            //() => ConsultantAction(center, "James", ConsoleColor.Yellow));
+            () => ConsultantAction(center, "Marcin", ConsoleColor.Red),
+            () => ConsultantAction(center, "James", ConsoleColor.Yellow));
     }
 
     private static void CallersAction(CallCenter center)
@@ -79,6 +79,34 @@ internal class Program
             int waitingCount = center.Call(clientId);
             Console.WriteLine($"Incoming call from {clientId}, waiting in the queue: {waitingCount}");
             Thread.Sleep(rnd.Next(1000, 5000));
+        }
+    }
+
+    private static void ConsultantAction(CallCenter center, string name, ConsoleColor color)
+    {
+        Random rand = new Random();
+        while (true)
+        {
+            IncomingCall call = center.Answer(name);
+            if(call != null)
+            {
+                Console.ForegroundColor = color;
+                Console.WriteLine($"Call {call.Id} from {call.ClientId} is answered by {call.Consultant}");
+
+                Console.ForegroundColor = ConsoleColor.Gray;
+                Thread.Sleep(rand.Next(1000, 10000));
+                center.End(call);
+
+                Console.ForegroundColor = color;
+                Console.WriteLine($"Call {call.Id} from {call.ClientId} is ended by {call.Consultant}");
+                Console.ForegroundColor = ConsoleColor.Gray;
+
+                Thread.Sleep(rand.Next(500, 1000));
+            }
+            else
+            {
+                Thread.Sleep(100);
+            }
         }
     }
 }
