@@ -58,3 +58,27 @@ using System.Reflection.Metadata.Ecma335;
 }*/
 
 // PROGRAM FOR CALL CENTER MANY CONSULTANTS
+
+internal class Program
+{
+    static void Main(string[] args)
+    {
+        CallCenter center = new CallCenter();
+        Parallel.Invoke(
+            () => CallersAction(center),
+            //() => ConsultantAction(center, "Marcin", ConsoleColor.Red),
+            //() => ConsultantAction(center, "James", ConsoleColor.Yellow));
+    }
+
+    private static void CallersAction(CallCenter center)
+    {
+        Random rnd = new Random();
+        while (true)
+        {
+            int clientId = rnd.Next(1, 10000);
+            int waitingCount = center.Call(clientId);
+            Console.WriteLine($"Incoming call from {clientId}, waiting in the queue: {waitingCount}");
+            Thread.Sleep(rnd.Next(1000, 5000));
+        }
+    }
+}
