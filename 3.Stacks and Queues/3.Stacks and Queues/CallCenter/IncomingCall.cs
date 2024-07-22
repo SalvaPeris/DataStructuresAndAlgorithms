@@ -8,5 +8,6 @@
         public DateTime StartTime { get; set; }
         public DateTime EndTime { get; set; }
         public string? Consultant { get; set; }
+        public bool IsPriority { get; set; }
     }
 }
