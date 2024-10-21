@@ -1,6 +1,8 @@
-﻿namespace Trees.Binary_trees.Models
+﻿namespace Trees___Binary_trees.Models
 {
-    internal class TreeNode
+    public class TreeNode<T>
     {
+        public T Data { get; set; }
+        public List<TreeNode<T>> Children { get; set; }
     }
 }
