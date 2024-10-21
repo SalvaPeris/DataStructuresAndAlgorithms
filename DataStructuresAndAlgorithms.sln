@@ -11,13 +11,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "2.Arrays and Lists - Sortin
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "3.Stacks and Queues", "3.Stacks and Queues\3.Stacks and Queues.csproj", "{3F68CB71-7DEC-4DC9-B124-E5C208622A08}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4.Dictionaries and Sets - Coupon", "4.Dictionaries and Sets - Coupon\4.Dictionaries and Sets - Coupon.csproj", "{18C99F75-CC47-48C3-A88B-9C263865748D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "4.Dictionaries and Sets - Coupon", "4.Dictionaries and Sets - Coupon\4.Dictionaries and Sets - Coupon.csproj", "{18C99F75-CC47-48C3-A88B-9C263865748D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4.Dictionaries and Sets - Swimming pool", "4.Dictionaries and Sets - Swimming pool\4.Dictionaries and Sets - Swimming pool.csproj", "{ECF9A7BA-6F62-4D94-AFA9-11876BB71B51}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "4.Dictionaries and Sets - Swimming pool", "4.Dictionaries and Sets - Swimming pool\4.Dictionaries and Sets - Swimming pool.csproj", "{ECF9A7BA-6F62-4D94-AFA9-11876BB71B51}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4.Dictionaries and Sets - Duplicates", "4.Dictionaries and Sets - Duplicates\4.Dictionaries and Sets - Duplicates.csproj", "{CB83A3DE-4AE3-47CC-97E2-7F06C06B8979}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "4.Dictionaries and Sets - Duplicates", "4.Dictionaries and Sets - Duplicates\4.Dictionaries and Sets - Duplicates.csproj", "{CB83A3DE-4AE3-47CC-97E2-7F06C06B8979}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5.Trees - Binary trees", "5.Trees - Binary trees\5.Trees - Binary trees.csproj", "{E5570A29-CD5E-4A79-A731-6DE4F3AC94A8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "5.Trees - Binary trees", "5.Trees - Binary trees\5.Trees - Binary trees.csproj", "{E5570A29-CD5E-4A79-A731-6DE4F3AC94A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5.Trees - AVL", "5.Trees - AVL\5.Trees - AVL.csproj", "{F5B79B34-13BC-4287-9B2A-0BF6C335249B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +59,10 @@ Global
 		{E5570A29-CD5E-4A79-A731-6DE4F3AC94A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E5570A29-CD5E-4A79-A731-6DE4F3AC94A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E5570A29-CD5E-4A79-A731-6DE4F3AC94A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5B79B34-13BC-4287-9B2A-0BF6C335249B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5B79B34-13BC-4287-9B2A-0BF6C335249B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5B79B34-13BC-4287-9B2A-0BF6C335249B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5B79B34-13BC-4287-9B2A-0BF6C335249B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
