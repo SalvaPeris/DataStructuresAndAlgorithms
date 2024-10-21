@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "3.Stacks and Queues", "3.St
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4.Dictionaries and Sets - Coupon", "4.Dictionaries and Sets - Coupon\4.Dictionaries and Sets - Coupon.csproj", "{18C99F75-CC47-48C3-A88B-9C263865748D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4.Dictionaries and Sets - Swimming pool", "4.Dictionaries and Sets - Swimming pool\4.Dictionaries and Sets - Swimming pool.csproj", "{ECF9A7BA-6F62-4D94-AFA9-11876BB71B51}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{18C99F75-CC47-48C3-A88B-9C263865748D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{18C99F75-CC47-48C3-A88B-9C263865748D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{18C99F75-CC47-48C3-A88B-9C263865748D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ECF9A7BA-6F62-4D94-AFA9-11876BB71B51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECF9A7BA-6F62-4D94-AFA9-11876BB71B51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECF9A7BA-6F62-4D94-AFA9-11876BB71B51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECF9A7BA-6F62-4D94-AFA9-11876BB71B51}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
