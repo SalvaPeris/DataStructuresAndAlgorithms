@@ -75,5 +75,37 @@ internal class Program
         Console.WriteLine("\n4. Prim - Minimum Spanning Tree:");
         List<Edge<int>> primMstNodes = graph2.PrimMST();
         primMstNodes.ForEach(n => Console.WriteLine(n));
+
+
+        // Undirected and unweighted edges
+        Graph<int> graph3 = new Graph<int>(false, false);
+
+        Node<int> n1__ = graph3.AddNode(1);
+        Node<int> n2__ = graph3.AddNode(2);
+        Node<int> n3__ = graph3.AddNode(3);
+        Node<int> n4__ = graph3.AddNode(4);
+        Node<int> n5__ = graph3.AddNode(5);
+        Node<int> n6__ = graph3.AddNode(6);
+        Node<int> n7__ = graph3.AddNode(7);
+        Node<int> n8__ = graph3.AddNode(8);
+
+        graph3.AddEdge(n1__, n2__);
+        graph3.AddEdge(n1__, n3__);
+        graph3.AddEdge(n2__, n4__);
+        graph3.AddEdge(n3__, n4__);
+        graph3.AddEdge(n4__, n5__);
+        graph3.AddEdge(n4__, n8__);
+        graph3.AddEdge(n5__, n6__);
+        graph3.AddEdge(n5__, n7__);
+        graph3.AddEdge(n5__, n8__);
+        graph3.AddEdge(n6__, n7__);
+        graph3.AddEdge(n7__, n8__);
+
+        Console.WriteLine("\n\n5. Colors in graph: ");
+        int[] colors = graph3.Color();
+        for (int i = 0; i < colors.Length; i++)
+        {
+            Console.WriteLine($"Node {graph.Nodes[i].Data}: {colors[i]}");
+        }
     }
 }
