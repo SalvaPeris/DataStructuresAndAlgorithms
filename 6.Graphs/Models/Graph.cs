@@ -117,6 +117,37 @@
                 if (!isExplored[neighbor.Index])
                     DFS(isExplored, neighbor, result);
         }
+
+        public List<Node<T>> BFS()
+        {
+            return BFS(Nodes[0]);
+        }
+
+        private List<Node<T>> BFS(Node<T> node)
+        {
+            bool[] isExplored = new bool[Nodes.Count];
+            List<Node<T>> result = new List<Node<T>>();
+            isExplored[node.Index] = true;
+
+            Queue<Node<T>> queue = new Queue<Node<T>>();
+            queue.Enqueue(node);
+            while (queue.Count > 0)
+            {
+                Node<T> next = queue.Dequeue();
+                result.Add(next);
+
+                foreach (Node<T> neighbor in next.Neighbors)
+                {
+                    if (!isExplored[neighbor.Index])
+                    {
+                        isExplored[neighbor.Index] = true;
+                        queue.Enqueue(neighbor);
+                    }
+                }
+            }
+
+            return result;
+        }
         #endregion
     }
 }

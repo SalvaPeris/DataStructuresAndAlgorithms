@@ -36,5 +36,11 @@ internal class Program
         Console.WriteLine("\n1. Depth-First Search:");
         List<Node<int>> dfsNodes = graph.DFS();
         dfsNodes.ForEach(n => Console.WriteLine(n));
+
+        Console.WriteLine("\n\n2. Breadth-First Search:");
+        List<Node<int>> bfsNodes = graph.BFS();
+        bfsNodes.ForEach(n => Console.WriteLine(n));
+
+
     }
 }
