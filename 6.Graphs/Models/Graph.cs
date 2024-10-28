@@ -118,6 +118,8 @@
                     DFS(isExplored, neighbor, result);
         }
 
+        #endregion
+
         public List<Node<T>> BFS()
         {
             return BFS(Nodes[0]);
@@ -148,6 +150,66 @@
 
             return result;
         }
+
+        #region Kruskal MST
+        public List<Edge<T>> KruskalMST()
+        {
+            List<Edge<T>> edges = GetEdges();
+            edges.Sort((a, b) => a.Weight.CompareTo(b.Weight));
+            Queue<Edge<T>> queue = new Queue<Edge<T>>(edges);
+
+            Subset<T>[] subsets = new Subset<T>[Nodes.Count];
+            for (int i = 0; i < Nodes.Count; i++)
+            {
+                subsets[i] = new Subset<T>() { Parent = Nodes[i] };
+            }
+
+            List<Edge<T>> result = new List<Edge<T>>();
+            while (result.Count < Nodes.Count - 1)
+            {
+                Edge<T> edge = queue.Dequeue();
+                Node<T> from = GetRoot(subsets, edge.From);
+                Node<T> to = GetRoot(subsets, edge.To);
+                if (from != to)
+                {
+                    result.Add(edge);
+                    Union(subsets, from, to);
+                }
+            }
+
+            return result;
+        }
+
+        private Node<T> GetRoot(Subset<T>[] subsets, Node<T> node)
+        {
+            if (subsets[node.Index].Parent != node)
+            {
+                subsets[node.Index].Parent = GetRoot(
+                    subsets,
+                    subsets[node.Index].Parent);
+            }
+
+            return subsets[node.Index].Parent;
+        }
+
+        private void Union(Subset<T>[] subsets, Node<T> a, Node<T> b)
+        {
+            if (subsets[a.Index].Rank > subsets[b.Index].Rank)
+            {
+                subsets[b.Index].Parent = a;
+            }
+            else if (subsets[a.Index].Rank < subsets[b.Index].Rank)
+            {
+                subsets[a.Index].Parent = b;
+            }
+            else
+            {
+                subsets[b.Index].Parent = a;
+                subsets[a.Index].Rank++;
+            }
+        }
         #endregion
+
+
     }
 }

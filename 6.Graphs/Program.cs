@@ -42,5 +42,34 @@ internal class Program
         bfsNodes.ForEach(n => Console.WriteLine(n));
 
 
+        // Undirected and weighted edges
+        Graph<int> graph2 = new Graph<int>(false, true);
+
+        Node<int> n1_ = graph2.AddNode(1);
+        Node<int> n2_ = graph2.AddNode(2);
+        Node<int> n3_ = graph2.AddNode(3);
+        Node<int> n4_ = graph2.AddNode(4);
+        Node<int> n5_ = graph2.AddNode(5);
+        Node<int> n6_ = graph2.AddNode(6);
+        Node<int> n7_ = graph2.AddNode(7);
+        Node<int> n8_ = graph2.AddNode(8);
+
+        graph2.AddEdge(n1_, n2_, 3);
+        graph2.AddEdge(n1_, n3_, 5);
+        graph2.AddEdge(n2_, n4_, 4);
+        graph2.AddEdge(n3_, n4_, 12);
+        graph2.AddEdge(n4_, n5_, 9);
+        graph2.AddEdge(n4_, n8_, 8);
+        graph2.AddEdge(n5_, n6_, 4);
+        graph2.AddEdge(n5_, n7_, 5);
+        graph2.AddEdge(n5_, n8_, 1);
+        graph2.AddEdge(n6_, n7_, 6);
+        graph2.AddEdge(n7_, n8_, 20);
+        graph2.AddEdge(n2_, n6_, 20);
+        graph2.AddEdge(n2_, n5_, 20);
+
+        Console.WriteLine("\n\n3. Kruskal - Minimum Spanning Tree:");
+        List<Edge<int>> kruskalMstNodes = graph2.KruskalMST();
+        kruskalMstNodes.ForEach(n => Console.WriteLine(n));
     }
 }
