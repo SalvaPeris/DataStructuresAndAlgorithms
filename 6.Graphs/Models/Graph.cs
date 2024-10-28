@@ -278,5 +278,45 @@
             }
         }
         #endregion
+
+        #region Coloring
+        // https://www.geeksforgeeks.org/graph-coloring-set-2-greedy-algorithm/
+        public int[] Color()
+        {
+            int[] colors = new int[Nodes.Count];
+            Fill(colors, -1);
+            colors[0] = 0;
+
+            bool[] availability = new bool[Nodes.Count];
+            for (int i = 1; i < Nodes.Count; i++)
+            {
+                Fill(availability, true);
+
+                int colorIndex = 0;
+                foreach (Node<T> neighbor in Nodes[i].Neighbors)
+                {
+                    colorIndex = colors[neighbor.Index];
+                    if (colorIndex >= 0)
+                    {
+                        availability[colorIndex] = false;
+                    }
+                }
+
+                colorIndex = 0;
+                for (int j = 0; j < availability.Length; j++)
+                {
+                    if (availability[j])
+                    {
+                        colorIndex = j;
+                        break;
+                    }
+                }
+
+                colors[i] = colorIndex;
+            }
+
+            return colors;
+        }
+        #endregion
     }
 }
