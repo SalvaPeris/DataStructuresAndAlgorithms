@@ -23,9 +23,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "5.Trees - AVL", "5.Trees - 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "6.Graphs", "6.Graphs\6.Graphs.csproj", "{15DCC0C6-E1A0-4DFD-8FCE-CD285DC08494}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "6.Graphs - Telecommunication cable", "6.Graphs - Telecommunication cable\6.Graphs - Telecommunication cable.csproj", "{D1E3F927-4E36-4133-8090-E4AD207E19C0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "6.Graphs - Telecommunication cable", "6.Graphs - Telecommunication cable\6.Graphs - Telecommunication cable.csproj", "{D1E3F927-4E36-4133-8090-E4AD207E19C0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "6.Graphs - Voivodeship", "6.Graphs - Voivodeship\6.Graphs - Voivodeship.csproj", "{3512597F-CA7E-4425-A9E1-021633EEB085}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "6.Graphs - Voivodeship", "6.Graphs - Voivodeship\6.Graphs - Voivodeship.csproj", "{3512597F-CA7E-4425-A9E1-021633EEB085}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "6.Graphs - Game Map", "6.Graphs - Game Map\6.Graphs - Game Map.csproj", "{B4BAED7C-DC89-4CA6-97F9-033198162F72}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,6 +83,10 @@ Global
 		{3512597F-CA7E-4425-A9E1-021633EEB085}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3512597F-CA7E-4425-A9E1-021633EEB085}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3512597F-CA7E-4425-A9E1-021633EEB085}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4BAED7C-DC89-4CA6-97F9-033198162F72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4BAED7C-DC89-4CA6-97F9-033198162F72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4BAED7C-DC89-4CA6-97F9-033198162F72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4BAED7C-DC89-4CA6-97F9-033198162F72}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
