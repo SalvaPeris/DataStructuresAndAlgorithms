@@ -37,7 +37,7 @@ internal class Program
         List<Node<int>> dfsNodes = graph.DFS();
         dfsNodes.ForEach(n => Console.WriteLine(n));
 
-        Console.WriteLine("\n\n2. Breadth-First Search:");
+        Console.WriteLine("\n2. Breadth-First Search:");
         List<Node<int>> bfsNodes = graph.BFS();
         bfsNodes.ForEach(n => Console.WriteLine(n));
 
@@ -71,5 +71,9 @@ internal class Program
         Console.WriteLine("\n\n3. Kruskal - Minimum Spanning Tree:");
         List<Edge<int>> kruskalMstNodes = graph2.KruskalMST();
         kruskalMstNodes.ForEach(n => Console.WriteLine(n));
+
+        Console.WriteLine("\n4. Prim - Minimum Spanning Tree:");
+        List<Edge<int>> primMstNodes = graph2.PrimMST();
+        primMstNodes.ForEach(n => Console.WriteLine(n));
     }
 }

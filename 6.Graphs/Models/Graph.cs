@@ -210,6 +210,73 @@
         }
         #endregion
 
+        #region Prim MST
+        // https://www.geeksforgeeks.org/greedy-algorithms-set-5-prims-minimum-spanning-tree-mst-2/
+        public List<Edge<T>> PrimMST()
+        {
+            int[] previous = new int[Nodes.Count];
+            previous[0] = -1;
 
+            int[] minWeight = new int[Nodes.Count];
+            Fill(minWeight, int.MaxValue);
+            minWeight[0] = 0;
+
+            bool[] isInMST = new bool[Nodes.Count];
+            Fill(isInMST, false);
+
+            for (int i = 0; i < Nodes.Count - 1; i++)
+            {
+                int minWeightIndex = GetMinimumWeightIndex(minWeight, isInMST);
+                isInMST[minWeightIndex] = true;
+
+                for (int j = 0; j < Nodes.Count; j++)
+                {
+                    Edge<T> edge = this[minWeightIndex, j];
+                    int weight = edge != null ? edge.Weight : -1;
+                    if (!isInMST[j]
+                        && weight > 0
+                        && weight < minWeight[j])
+                    {
+                        previous[j] = minWeightIndex;
+                        minWeight[j] = weight;
+                        Console.WriteLine(" --> " + edge.ToString());
+                    }
+                }
+            }
+
+            List<Edge<T>> result = new List<Edge<T>>();
+            for (int i = 1; i < Nodes.Count; i++)
+            {
+                Edge<T> edge = this[previous[i], i];
+                result.Add(edge);
+            }
+            return result;
+        }
+
+        private int GetMinimumWeightIndex(int[] weights, bool[] isInMST)
+        {
+            int minValue = int.MaxValue;
+            int minIndex = 0;
+
+            for (int i = 0; i < Nodes.Count; i++)
+            {
+                if (!isInMST[i] && weights[i] < minValue)
+                {
+                    minValue = weights[i];
+                    minIndex = i;
+                }
+            }
+
+            return minIndex;
+        }
+
+        private void Fill<Q>(Q[] array, Q value)
+        {
+            for (int i = 0; i < array.Length; i++)
+            {
+                array[i] = value;
+            }
+        }
+        #endregion
     }
 }
