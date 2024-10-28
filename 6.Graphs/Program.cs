@@ -107,5 +107,9 @@ internal class Program
         {
             Console.WriteLine($"Node {graph.Nodes[i].Data}: {colors[i]}");
         }
+
+        Console.WriteLine("\n\n6. Shortest path - Dijkstra: ");
+        List<Edge<int>> dijkstraNodes = graph.DijkstraSP(n1, n5);
+        dijkstraNodes.ForEach(n => Console.WriteLine(n));
     }
 }
